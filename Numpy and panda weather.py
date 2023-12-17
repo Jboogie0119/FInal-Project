@@ -31,7 +31,7 @@ high_precipitation_df = weather_df[weather_df["precipitation"] > 10]
 # Writes the data to a CSV file
 high_precipitation_df.to_csv("high_precipitation_cities.csv", index=False)
 
-# This creates a visulization using metasploit
+# This creates a visulization using matplotlib
 # Bar graph
 plt.bar(weather_df["city"], weather_df["temperature"])
 plt.title("City Temperatures")
