@@ -28,6 +28,8 @@ print("Total Precipitation:", np.sum(precipitation))
 weather_df["feels_like"] = weather_df["temperature"] - 0.7 * (100 - weather_df["humidity"]) / 100
 #this filters the cities with high precipitation
 high_precipitation_df = weather_df[weather_df["precipitation"] > 10]
+# Writes the data to a CSV file
+high_precipitation_df.to_csv("high_precipitation_cities.csv", index=False)
 
 # This creates a visulization using metasploit
 # Bar graph
